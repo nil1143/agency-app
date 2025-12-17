@@ -1,12 +1,18 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
 import ThemeToggleBtn from "./ThemeToggleBtn";
+import { motion } from "motion/react";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70">
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex justify-between items-center px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky top-0 z-20 backdrop-blur-xl font-medium bg-white/50 dark:bg-gray-900/70"
+    >
       <img
         src={theme === "dark" ? assets.logo_dark : assets.logo}
         alt="logo"
@@ -26,22 +32,37 @@ const Navbar = ({ theme, setTheme }) => {
           onClick={() => setSidebarOpen(false)}
         />
 
-        <a onClick={() => setSidebarOpen(false)} href="#" className="sm:hover:border-b">
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href="#"
+          className="sm:hover:border-b"
+        >
           Home
         </a>
-        <a onClick={() => setSidebarOpen(false)} href="#services" className="sm:hover:border-b">
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href="#services"
+          className="sm:hover:border-b"
+        >
           Services
         </a>
-        <a onClick={() => setSidebarOpen(false)} href="#our-work" className="sm:hover:border-b">
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href="#our-work"
+          className="sm:hover:border-b"
+        >
           Our Work
         </a>
-        <a onClick={() => setSidebarOpen(false)} href="#contact-us" className="sm:hover:border-b">
+        <a
+          onClick={() => setSidebarOpen(false)}
+          href="#contact-us"
+          className="sm:hover:border-b"
+        >
           Contact Us
         </a>
       </div>
 
       <div className="flex items-center gap-2 sm:gap-4">
-
         <ThemeToggleBtn theme={theme} setTheme={setTheme} />
 
         <img
@@ -58,7 +79,7 @@ const Navbar = ({ theme, setTheme }) => {
           Connect <img src={assets.arrow_icon} alt="arrow-icon" width={14} />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
