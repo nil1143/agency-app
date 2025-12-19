@@ -1,4 +1,5 @@
 import assets from "../assets/assets";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 const Footer = ({ theme }) => {

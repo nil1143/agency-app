@@ -1,4 +1,5 @@
 import { company_logos } from "../assets/assets";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 const TrustedBy = () => {

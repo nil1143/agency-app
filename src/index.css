@@ -12,3 +12,28 @@
 @theme {
   --color-primary: #5044E5;
 }
+
+/* src/index.css */
+@layer base {
+  /* Explicit light mode defaults */
+  input,
+  textarea {
+    @apply bg-white text-black placeholder:text-gray-400;
+  }
+
+  /* Dark mode overrides */
+  .dark input,
+  .dark textarea {
+    @apply bg-gray-900 text-white placeholder:text-white/50;
+  }
+
+  /* Chrome / WebKit autofill fix scoped to dark mode only */
+  .dark input:-webkit-autofill,
+  .dark textarea:-webkit-autofill,
+  .dark input:-webkit-autofill:focus,
+  .dark textarea:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #0f172a inset;
+    box-shadow: 0 0 0px 1000px #0f172a inset;
+    -webkit-text-fill-color: #fff;
+  }
+}

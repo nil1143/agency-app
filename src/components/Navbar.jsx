@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
 import ThemeToggleBtn from "./ThemeToggleBtn";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 const Navbar = ({ theme, setTheme }) => {

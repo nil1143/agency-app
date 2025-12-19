@@ -1,5 +1,6 @@
 import Title from "./Title";
 import { teamData } from "../assets/assets";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 const Teams = () => {

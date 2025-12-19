@@ -7,7 +7,7 @@ const ThemeToggleBtn = ({ theme, setTheme }) => {
       "(prefers-color-scheme: dark)"
     ).matches;
     setTheme(theme || (prefersDarkMode ? "dark" : "light"));
-  }, []);
+  }, [theme, setTheme]);
 
   useEffect(() => {
     if (theme === "dark") {

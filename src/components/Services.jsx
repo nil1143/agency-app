@@ -2,6 +2,7 @@ import React from "react";
 import assets from "../assets/assets";
 import Title from "./Title";
 import ServiceCard from "./ServiceCard";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 const Services = () => {

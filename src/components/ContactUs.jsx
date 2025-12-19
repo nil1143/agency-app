@@ -1,6 +1,7 @@
 import Title from "./Title";
 import assets from "../assets/assets";
 import toast from "react-hot-toast";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "motion/react";
 
 const ContactUs = () => {
@@ -54,13 +55,13 @@ const ContactUs = () => {
       >
         <div>
           <p className="mb-2 text-sm font-medium">Your Name</p>
-          <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
+          <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-900">
             <img src={assets.person_icon} alt="" />
             <input
               type="text"
               name="name"
               placeholder="Enter your name"
-              className="w-full p-3 text-sm outline-none"
+              className="w-full p-3 text-sm outline-none bg-white dark:bg-gray-900 text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/50"
               required
             />
           </div>
@@ -68,13 +69,13 @@ const ContactUs = () => {
 
         <div>
           <p className="mb-2 text-sm font-medium">Email Address</p>
-          <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600">
+          <div className="flex pl-3 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-900">
             <img src={assets.email_icon} alt="" />
             <input
               type="email"
               name="email"
               placeholder="Enter your email address"
-              className="w-full p-3 text-sm outline-none"
+              className="w-full p-3 text-sm outline-none bg-white dark:bg-gray-900 text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/50"
               required
             />
           </div>
@@ -86,7 +87,7 @@ const ContactUs = () => {
             name="message"
             rows={8}
             placeholder="Enter your message"
-            className="w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600"
+            className="w-full p-3 text-sm outline-none rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 text-black dark:text-white placeholder:text-gray-400 dark:placeholder:text-white/50"
             required
           />
         </div>
